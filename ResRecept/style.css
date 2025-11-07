@@ -1,0 +1,188 @@
+/* General body */
+body { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff5f5; /* light red background */
+}
+
+/* Header */
+header { 
+    background: #b71c1c; /* dark red */
+    color: white; 
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Layout */
+.container { display: flex; }
+
+/* Sidebar */
+.sidebar { 
+    background: #ffebee; 
+    padding: 20px; 
+    width: 200px; 
+    height: 100vh; 
+}
+.sidebar a { 
+    display: block; 
+    margin-bottom: 12px; 
+    padding: 8px; 
+    border-radius: 6px;
+    text-decoration: none; 
+    color: #b71c1c; 
+    font-weight: bold; 
+    transition: all 0.3s; 
+}
+.sidebar a:hover { background: #ffcdd2; }
+.sidebar a.active { background: #e53935; color: white; }
+
+/* Content */
+.content { padding: 20px; flex-grow: 1; }
+
+/* Cards */
+.card { 
+    background: #fff; 
+    padding: 20px; 
+    margin-bottom: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(183,28,28,0.2);
+}
+.card h3 { color: #b71c1c; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+th { background-color: #ffcdd2; color: #b71c1c; }
+tr { background: #ffffff; } /* all rows white */
+tr:hover { background: #fde0e0; } /* hover effect only */
+
+/* Status badges */
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+.badge-pending { background-color: #d32f2f; }   /* red */
+.badge-completed { background-color: #388e3c; } /* green */
+
+/* Badge button */
+button.badge {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff5f5; /* soft background */
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.login-box {
+    background: linear-gradient(145deg, #ffffff, #ffeaea); /* soft gradient */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(183, 28, 28, 0.3);
+    width: 420px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+.login-box:hover {
+    transform: translateY(-5px); /* floating effect */
+}
+
+.login-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(183,28,28,0.1) 20%, transparent 70%);
+    animation: pulse 6s infinite;
+    z-index: 0;
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+    color: #FF5722;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background: #fff;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.login-box input:focus {
+    box-shadow: 0 0 8px rgba(183,28,28,0.5);
+    transform: scale(1.02);
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #FF5722, #e53935);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.login-box button:hover {
+    background: linear-gradient(135deg, #a31515, #c62828);
+    transform: scale(1.05);
+}
+
+.login-box p {
+    margin-top: 15px;
+    font-size: 15px;
+    color: red;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.2); opacity: 0.2; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
