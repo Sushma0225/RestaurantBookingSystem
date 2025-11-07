@@ -1,0 +1,92 @@
+/* header-footer.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #d9e7f9);
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 2px solid #fceae8;
+}
+
+.logo img {
+  height: 55px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
+}
+
+nav a.active,
+nav a:hover {
+  color: #e74c3c;
+}
+
+nav a.active::after,
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+  background-color: #c0392b;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+}
+/* Birthday Banner */
+    .birthday-banner {
+      background-color: #ffc107;
+      color: #8b0000;
+      text-align: center;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
